@@ -1,0 +1,86 @@
+:root {
+    --bg: #05070a;
+    --card: #11141b;
+    --accent: #00f2ff;
+    --text: #ffffff;
+}
+
+body {
+    background: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.qr-container {
+    background: var(--card);
+    padding: 30px;
+    border-radius: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+}
+
+.qr-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--accent);
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.qr-display {
+    background: white; /* QR needs white background for contrast */
+    padding: 15px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 25px;
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.2);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.qr-display img { width: 180px; height: 180px; }
+
+.input-area {
+    display: flex;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    padding: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 10px;
+    outline: none;
+    font-size: 14px;
+}
+
+button {
+    background: var(--accent);
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:active { transform: scale(0.9); }
+
+.hint {
+    color: #4b5563;
+    font-size: 9px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
